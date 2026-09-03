@@ -1,0 +1,1 @@
+export default function Home(){ return (<div style={{fontFamily:"system-ui",padding:"40px"}}><h1>Wix Learning Agent is Live ✅ (No-Embed Mode)</h1><p>Works without OpenAI billing. Add $5 later for better answers.</p></div>); }
