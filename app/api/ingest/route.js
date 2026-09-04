@@ -31,6 +31,13 @@ export async function POST(req) {
     return new Response(JSON.stringify({ ok: true, message: 'Saved without embedding (no OpenAI billing needed)', source }), { status: 200, headers: corsHeaders });
   } catch (err) {
     console.error(err);
-    return new Response(JSON.stringify({ error: err.message }), { status: 500, headers: corsHeaders });
+    return new Response(
+      JSON.stringify({
+        error: err.message,
+        cause: err.cause ? String(err.cause) : null,
+        causeCode: err.cause?.code || null,
+      }),
+      { status: 500, headers: corsHeaders }
+    );
   }
 }
