@@ -1,0 +1,1 @@
+export default function Home(){ return (<div style={{fontFamily:"system-ui",padding:"40px"}}><h1>Wix Learning Agent v6 ✅</h1><p>Smart embedding + fallback. <a href="/api/debug">Check debug</a></p></div>); }
